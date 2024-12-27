@@ -10,7 +10,7 @@ type medium interface {
 }
 
 type dataLayer interface {
-	get(string) blog
+	get(int) blog
 	post(blog) blog
 	edit(blog) blog
 	delete(int) interface{}

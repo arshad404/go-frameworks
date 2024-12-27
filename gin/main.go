@@ -13,7 +13,7 @@ func main() {
 	router.POST("/blog", controllerServer.saveBlog)
 	router.GET("/blog/:id", controllerServer.getBlogs)
 	router.DELETE("/blog/:id", controllerServer.removeBlog)
-	router.PUT("/blog/:id", controllerServer.editBlog)
+	router.PUT("/blog", controllerServer.editBlog)
 
 	router.Run() // localhost:8080
 }
