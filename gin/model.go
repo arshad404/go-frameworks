@@ -5,7 +5,3 @@ type blog struct {
 	Title   string `json:"title"`
 	Content string `json:"content"`
 }
-
-type getRequestBody struct {
-	ID int `json:"id"`
-}

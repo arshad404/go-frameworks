@@ -27,11 +27,11 @@ func (ds dataStorage) post(blog *blog) error {
 	return nil
 }
 
-func (ds dataStorage) edit(blog blog) error {
+func (ds dataStorage) edit(blog *blog) error {
 	if ds.blogStorage[blog.ID] == nil {
 		return errors.New("blog with this id is not present in the database, please create a new blog")
 	}
-	ds.blogStorage[blog.ID] = &blog
+	ds.blogStorage[blog.ID] = blog
 	return nil
 }
 

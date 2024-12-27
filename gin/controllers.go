@@ -51,7 +51,7 @@ func (gs ginControllerServer) editBlog(ctx *gin.Context) {
 		return
 	}
 
-	err := gs.dataStorage.edit(requestBody)
+	err := gs.dataStorage.edit(&requestBody)
 	if err != nil {
 		ctx.JSON(http.StatusNotFound, gin.H{
 			"message": err.Error(),
